@@ -1,0 +1,13 @@
+.success {
+    margin: 50px auto;
+}
+
+.squada-title {
+    margin-bottom: 33px;
+}
+
+iframe {
+    outline: 3px solid black;
+    outline-offset: 5px;
+    margin: auto;
+}

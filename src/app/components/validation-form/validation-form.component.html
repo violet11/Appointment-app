@@ -1,0 +1,136 @@
+<div class="container-form">
+        <h1 class="squada-title form-title">BOOK YOUR APPOINTMENT</h1>
+        <form [formGroup]="form" 
+                (ngSubmit)="onSubmit('success')">
+                <div class="form-group">
+                        <input  type="text" 
+                                class="form-control upperCase" 
+                                id="first-name" 
+                                formControlName="firstName"
+                                placeholder="First Name"
+                                required>
+                        <span *ngIf="((firstName.touched || submitted) && firstName.errors?.['required']) 
+                                || ((lastName.touched || submitted) && lastName.errors?.['required'])">
+                                Please enter your full name
+                        </span>
+                </div>
+                <div class="form-group">
+                        <input type="text" 
+                                class="form-control upperCase" 
+                                id="last-name" 
+                                formControlName="lastName"
+                                placeholder="Last Name"
+                                required>
+                </div>
+                <div class="form-group two">
+                        <input type="email" 
+                                class="form-control" 
+                                id="email" 
+                                formControlName="email"
+                                placeholder = "email"
+                                required>
+                        <span   *ngIf="((email.touched || submitted) && email.invalid)"> <!-- če uporabimo invalid - zaobjamemo required in pattern-->
+                                Please enter a valid email
+                        </span>
+                </div>
+                <div class="form-group two">
+                        <input type="text"
+                                class="form-control" 
+                                id="contact-number" 
+                                formControlName="contactNumber"
+                                placeholder="{{ placeholder.contact }}"
+                                required>
+                        <span   *ngIf="((contactNumber.touched || submitted) && contactNumber.invalid)">
+                                Please enter phone number
+                        </span>
+                </div>
+                <div class="form-group three">
+                        <select class="form-control" 
+                                id="barber" 
+                                formControlName="chosenBarber" 
+                                required>
+                                <option [ngValue]="null" 
+                                        disabled>
+                                        {{ placeholder.barber }}
+                                </option>
+                                <option *ngFor="let chosenBarber of barbers" [ngValue]="chosenBarber"> <!-- loop over array of barbers -->
+                                        {{ chosenBarber.firstName + " " + chosenBarber.lastName }} <!-- tukaj se firstName nanaša na array iz http klica-->
+                                </option>
+                        </select>
+                        <span   *ngIf="((chosenBarber.touched || submitted) && chosenBarber.errors?.['required'])">
+                                Please select a barber
+                        </span>
+                </div>
+                <div class="form-group three">
+                        <select class="form-control" 
+                                id="service" 
+                                formControlName="service"
+                                (change)="writePrice()"
+                                required>
+                                <option [ngValue]="null" 
+                                        disabled>
+                                        {{ placeholder.service }}
+                                </option>
+                                <option *ngFor="let service of services" 
+                                        [ngValue]="service"> 
+                                        {{ service.name }} 
+                                </option>
+                        </select>
+                <span   *ngIf="((service.touched || submitted) && service.errors?.['required'])">
+                        Please select a service
+                </span>
+                </div>
+                <div class="form-group four">
+                        <input type="text"
+                                placeholder="{{ placeholder.date }}"
+                                class="form-control"
+                                id="date"
+                                formControlName="date"
+                                bsDatepicker
+                                [bsConfig]="{dateInputFormat: 'DD/MM/YYYY', containerClass:'theme-default'}"
+                                [minDate]="minDate"
+                                [maxDate]="maxDate"
+                                [daysDisabled]="[6,0]"
+                                required>
+                        <span   *ngIf="((date.touched || submitted) && date.invalid)">
+                                Please pick a date
+                        </span>
+                </div>
+                <div class="form-group four">
+                        <select type="time" 
+                                class="form-control" 
+                                id="time" 
+                                formControlName="time"
+                                (click)="changeWorkingHours()"
+                                required>
+                                <option [ngValue]="null" 
+                                        disabled>
+                                        {{ placeholder.time }}
+                                </option>
+                                <option *ngFor="let time of workingHours" 
+                                        [ngValue]="time"> 
+                                        {{ time }} 
+                                </option>
+                        </select>
+                        <span   *ngIf="((time.touched || submitted) && time.errors?.['required'])">
+                                Please pick a time
+                        </span>
+                </div>
+                <div class="form-group">
+                        <input [ngStyle]="{'margin-top': 'this.appointmentForm.invalid' ? '-100px': '0px'}"
+                                type="text" 
+                                class="form-control wider" 
+                                id="price" 
+                                formControlName="price"
+                                [ngStyle]="{'background-color': '#ffff'}"
+                                placeholder="{{ placeholder.price }}">
+                </div>
+                <div class="form-group">
+                        <button type="submit"
+                                class="form-control wider" 
+                                id="submit">
+                                {{ placeholder.book }}
+                        </button>
+                </div>
+        </form>
+</div>

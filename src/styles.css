@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+  
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    background-color: #fbf4eb
+}
+
+.squada-title {
+    font-family: "Squada One", cursive; 
+    font-size: 37px;
+    letter-spacing: 1.8px;
+    font-weight: 500;
+}
+

@@ -1,0 +1,32 @@
+.title {
+    font-family: "Squada One", cursive; 
+    font-size: 58px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.quote {
+    font-family: "Roboto Slab", serif; 
+    font-size: 17px; 
+    font-weight: 500; 
+    letter-spacing: 1px;
+    margin-top: 12px;
+    line-height: 1.83em;
+}
+
+@media (max-width: 450px){
+    .header {
+        margin-top: 19px;
+        width: 70%;
+        margin: auto;
+    }
+
+    .title {
+        font-size: 2.03rem;
+        margin-top: 25px;
+    }
+
+    .quote {
+        font-size: 0.73rem;
+    }
+} 

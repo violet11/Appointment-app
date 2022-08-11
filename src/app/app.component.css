@@ -1,0 +1,19 @@
+.background {
+    background-color: #fbf4eb;
+    height: 100%;
+}
+
+.container-app {
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    margin-top: 22px;
+    position: relative;
+    text-align: center;
+}
+
+@media (max-width: 800px){
+    .container-app{
+        width: 100%;
+    }
+}

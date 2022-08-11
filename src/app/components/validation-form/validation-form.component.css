@@ -1,0 +1,154 @@
+.container-form {
+    width: 438px;
+    min-height: 552px;
+    padding: 20px;
+    margin-left: 632px;
+    margin-top: -461px;
+    position: absolute;
+    background-color: #1e2841;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 27px;
+}
+
+.form-title {
+    color: #ffffff;
+    margin-top: 13px;
+}
+
+.form-group {
+    font-family: "Roboto Slab", serif;
+    margin: 5px;
+}
+
+.form-control {
+    padding: 10px;
+    border-radius: 0%;
+    font-size: 14px;
+    font-weight: 500; 
+    letter-spacing: 0.6px;
+    width: 183px;
+    height: 40px;
+}
+
+.form-group.two {
+    margin-top: 31px;
+    margin-bottom: 13px;
+}
+
+.form-group.three {
+    margin-bottom: 19px;
+}
+
+.form-group.four {
+    margin-bottom: 20px;
+}
+
+.form-group span {
+    margin-top: 0px;
+    float: left;
+    font-size: 14px;
+    color: #d7363a;
+    height: 27px;
+    padding-top: 3px;
+}
+
+.wider {
+    width: 376px;
+}
+
+#submit {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    font-weight: 400; 
+    letter-spacing: 2px;
+    background-color: #f6885b;
+    color: #ffffff;
+    border-radius: 30px;
+    border: none;
+    height: 56px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.upperCase {
+    text-transform: capitalize;
+}
+
+select {
+    border-radius: 4px !important;
+    position: relative;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: #ffffff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="rgb(60, 60, 60)" viewBox="0 0 24 24"><path d="M12 0l8 10h-16l8-10zm8 14h-16l8 10 8-10z"/></svg>') no-repeat;
+    color: #606060; 
+    background-position: right 2px top 46%;
+}
+
+select:first-child{
+    padding-left: 8px;
+    padding-top: 8px;
+}
+
+
+@media (max-width: 450px) {
+    .container-form {
+        width: 100%;
+        margin: 0px;
+        margin-top: 20px;
+    }
+    
+    .form-title {
+        font-size: 26px;
+        margin: 5px 0px 10px 0px;
+    }
+
+    form {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    .form-group {
+        margin: 0px;
+    }
+
+    .form-group.two {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .form-group.three {
+        margin-bottom: 0px;
+    }
+
+    .form-group.four {
+        margin-bottom: 2px;
+    }
+
+    .form-control {
+        width: 100%;
+        font-size: 11px;
+        height: 32px;
+        margin: 5px;
+    }
+    
+    form span  {
+        font-size: 5px;
+    }
+
+    #submit {
+        height: 45px;
+    }
+
+    select:first-child{
+        padding-left: 6px;
+        padding-top: 4px;
+    }
+  }
+  
