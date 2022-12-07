@@ -22,7 +22,7 @@ import { SafePipe } from './pipes/safe.pipe';
     ImageComponent,
     SuccessComponent,
     BarberComponent, 
-    SafePipe,
+    SafePipe
   ],
   imports: [
     BrowserModule,

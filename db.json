@@ -253,6 +253,30 @@
       "startDate": 1660546828,
       "barberId": 1,
       "serviceId": 1
+    },
+    {
+      "id": 24,
+      "startDate": 1660552243,
+      "barberId": 1,
+      "serviceId": 1
+    },
+    {
+      "id": 25,
+      "startDate": 1660555831,
+      "barberId": 1,
+      "serviceId": 1
+    },
+    {
+      "id": 26,
+      "startDate": 1660557035,
+      "barberId": 1,
+      "serviceId": 1
+    },
+    {
+      "id": 27,
+      "startDate": 1663239058,
+      "barberId": 1,
+      "serviceId": 1
     }
   ],
   "workHours": [
